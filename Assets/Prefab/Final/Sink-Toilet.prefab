@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4756030847350234262
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.627
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.264402
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 57.242
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -6751577926552936763, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df55cf29791f0f84aa3b236c2ec8d06d, type: 2}
+    - target: {fileID: -1001281382438128537, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55b7edeea1485b74aa4e587110eacb9d, type: 2}
+    - target: {fileID: 475984735697570697, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55b7edeea1485b74aa4e587110eacb9d, type: 2}
+    - target: {fileID: 919132149155446097, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_Name
+      value: Sink-Toilet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1950177741302098157, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df55cf29791f0f84aa3b236c2ec8d06d, type: 2}
+    - target: {fileID: 4001005333770863359, guid: 39da978bcbaa17448b662b536e613280, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df55cf29791f0f84aa3b236c2ec8d06d, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39da978bcbaa17448b662b536e613280, type: 3}
