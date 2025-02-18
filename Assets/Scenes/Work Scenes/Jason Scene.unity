@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e9c1a61971aab494ab5e002987e9104d, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -482,6 +482,63 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!1001 &1253392080
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8301532558792256610, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_Name
+      value: prison-door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 50.18489
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 17.191652
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 61.871277
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8682701815585093336, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
 --- !u!1001 &106006435718706739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -696,6 +753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7508639195268206007, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8a57a0cf98acdaf46813aa970892f720, type: 2}
     - target: {fileID: 8301532558792256610, guid: db4b116c7235b3749baa11eeb7cebffc, type: 3}
       propertyPath: m_Name
       value: prison-door
@@ -1411,3 +1472,4 @@ SceneRoots:
   - {fileID: 543450653045055196}
   - {fileID: 3055657497941389909}
   - {fileID: 1846709473607089462}
+  - {fileID: 1253392080}
