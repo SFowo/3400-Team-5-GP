@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class RobotBehavior : MonoBehaviour
@@ -6,6 +5,7 @@ public class RobotBehavior : MonoBehaviour
     public float speed = 3f;
     public float distance = 10f;
     public float detectionWindow = 2f;
+    public AudioSource audioSource;
 
     private Vector3 startPos;
     private bool movingForward = true;
@@ -29,6 +29,7 @@ public class RobotBehavior : MonoBehaviour
             if (Vector3.Distance(startPos, transform.position) >= distance)
             {
                 movingForward = false;
+                transform.Rotate(0,180,0);
             }
         }
         else
@@ -37,6 +38,7 @@ public class RobotBehavior : MonoBehaviour
             if (Vector3.Distance(startPos, transform.position) <= 0.1f)
             {
                 movingForward = true;
+                transform.Rotate(0, 180, 0);
             }
         }
     }
@@ -49,7 +51,11 @@ public class RobotBehavior : MonoBehaviour
 
         if (distFromStart >= lowerBound && distFromStart <= upperBound)
         {
-            Debug.Log("Detecting player");
+            Debug.Log("Can see player");
+        }
+        else
+        {
+            Debug.Log("Can't see player");
         }
     }
 }
