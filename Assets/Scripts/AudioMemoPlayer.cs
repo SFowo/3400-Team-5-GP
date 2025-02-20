@@ -8,7 +8,7 @@ public class AudioMemoPlayer : MonoBehaviour
     public Transform endPoint;
     public GameObject phoneObject;
 
-    private bool isPlaying = false;
+    public bool isPlaying = false;
 
     void Update()
     {

@@ -6,9 +6,12 @@ public class RobotBehavior : MonoBehaviour
     public float distance = 10f;
     public float detectionWindow = 2f;
     public AudioSource audioSource;
+    public AudioSource caughtSfx;
+    public AudioMemoPlayer phone;
 
     private Vector3 startPos;
     private bool movingForward = true;
+    private bool move = true;
 
     void Start()
     {
@@ -17,8 +20,12 @@ public class RobotBehavior : MonoBehaviour
 
     void Update()
     {
-        Move();
-        DetectPlayer();
+        if (move)
+        {
+            Move();
+            DetectPlayer();
+        }
+        
     }
 
     private void Move()
@@ -51,11 +58,11 @@ public class RobotBehavior : MonoBehaviour
 
         if (distFromStart >= lowerBound && distFromStart <= upperBound)
         {
-
-        }
-        else
-        {
-
+            if (phone.isPlaying)
+            {
+                caughtSfx.Play();
+                move = false;
+            }
         }
     }
 }

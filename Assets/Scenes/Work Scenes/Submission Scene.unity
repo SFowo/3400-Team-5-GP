@@ -6143,6 +6143,7 @@ MonoBehaviour:
   startPoint: {fileID: 1643796312}
   endPoint: {fileID: 2033169940}
   phoneObject: {fileID: 162129185}
+  isPlaying: 0
 --- !u!82 &162129187
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9296,6 +9297,134 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &305227396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305227398}
+  - component: {fileID: 305227397}
+  m_Layer: 0
+  m_Name: alarm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &305227397
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305227396}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 3a1601a6b5b3d28448a93b0d49225f5d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &305227398
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305227396}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1583652, y: 1.8070524, z: -2.0107892}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &315763699
 Mesh:
   m_ObjectHideFlags: 0
@@ -9557,6 +9686,8 @@ MonoBehaviour:
   distance: 30
   detectionWindow: 5
   audioSource: {fileID: 0}
+  caughtSfx: {fileID: 305227397}
+  phone: {fileID: 162129186}
 --- !u!82 &322362467
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10070,6 +10201,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 40936400527026079, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.33472052
+      objectReference: {fileID: 0}
+    - target: {fileID: 40936400527026079, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: -0.01000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 40936400527026079, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0.09100437
+      objectReference: {fileID: 0}
     - target: {fileID: 579562040785165365, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -10233,8 +10376,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1493537085}
   - {fileID: 1321983730}
+  - {fileID: 1493537085}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -11409,6 +11552,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 40936400527026079, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 1472779
+      objectReference: {fileID: 0}
+    - target: {fileID: 40936400527026079, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: NaN
+      objectReference: {fileID: 0}
     - target: {fileID: 579562040785165365, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -11445,6 +11596,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 423707845}
+    - target: {fileID: 7840344713636196665, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 130502.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 7840344713636196665, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: NaN
+      objectReference: {fileID: 0}
     - target: {fileID: 8333954415185188196, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.571
@@ -12758,7 +12917,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 8e-45, z: 4.5104e-41, w: 4.4124e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -14822,7 +14981,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.19e-43, z: 3.9238e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -14902,7 +15061,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.73e-43, y: 6e-44, z: 6.6e-44, w: 4.989e-42}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 2.17e-43, z: 3.4026e-41, w: 1.00151e-11}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -31663,6 +31822,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1805252415}
+    - target: {fileID: 7840344713636196665, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 15877.617
+      objectReference: {fileID: 0}
     - target: {fileID: 8333954415185188196, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.5
@@ -89280,7 +89443,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 1.9e-43, z: 3.2803e-41, w: 1.00151e-11}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -98107,3 +98270,4 @@ SceneRoots:
   - {fileID: 2024597425}
   - {fileID: 322362464}
   - {fileID: 1654082530}
+  - {fileID: 305227398}
