@@ -9482,7 +9482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2702545000757341634, guid: 16db4849f17f79947aecc17e0d53eb20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.978829
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 2702545000757341634, guid: 16db4849f17f79947aecc17e0d53eb20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9955,6 +9955,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0453aa48cf359bc4d942c57039053e5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 333245828}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0453aa48cf359bc4d942c57039053e5c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 333245829}
     - targetCorrespondingSourceObject: {fileID: 5817231211951681562, guid: 0453aa48cf359bc4d942c57039053e5c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 333245827}
@@ -9992,6 +9995,7 @@ MonoBehaviour:
   sitPoint: {fileID: 1539188630}
   interactionRadius: 0.8
   startSeated: 1
+  SITTING: 0
 --- !u!64 &333245827
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -10036,6 +10040,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!65 &333245829
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333245825}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.79, y: 2.11, z: 2.25}
+  m_Center: {x: -0.18, y: 0, z: 0}
 --- !u!1001 &352111320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11322,6 +11347,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8159671993453274894, guid: cb63a3a58c50cf44d880397a58cf2893, type: 3}
   m_PrefabInstance: {fileID: 492829032}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &500903273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500903274}
+  - component: {fileID: 500903275}
+  m_Layer: 0
+  m_Name: deskcolliderextra
+  m_TagString: Sitable
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &500903274
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500903273}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8870002, y: -1.9460001, z: 4.228}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1103238066}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &500903275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500903273}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.45, y: 1.28, z: 1.05}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &513156251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14823,7 +14901,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.73e-43, y: 6e-44, z: 6.6e-44, w: 4.989e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -24064,6 +24142,7 @@ Transform:
   - {fileID: 2106102341}
   - {fileID: 20748394}
   - {fileID: 333245823}
+  - {fileID: 500903274}
   - {fileID: 1430910326}
   - {fileID: 1195287664}
   - {fileID: 175253824}
@@ -30894,6 +30973,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1428631207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ef56a27479f4344c90d3bc88c45f16f, type: 3}
+  m_PrefabInstance: {fileID: 1544863835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1430910325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31009,6 +31093,7 @@ MonoBehaviour:
   sitPoint: {fileID: 10650679}
   interactionRadius: 0.7
   startSeated: 0
+  SITTING: 0
 --- !u!64 &1430910329
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -32757,13 +32842,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7ef56a27479f4344c90d3bc88c45f16f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1544863839}
   m_SourcePrefab: {fileID: 100100000, guid: 7ef56a27479f4344c90d3bc88c45f16f, type: 3}
 --- !u!4 &1544863836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7ef56a27479f4344c90d3bc88c45f16f, type: 3}
   m_PrefabInstance: {fileID: 1544863835}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1544863839
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1428631207}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6007717272665141588, guid: 7ef56a27479f4344c90d3bc88c45f16f, type: 3}
 --- !u!1 &1554106229
 GameObject:
   m_ObjectHideFlags: 0
@@ -89433,6 +89543,8 @@ MonoBehaviour:
   interactText: {fileID: 1321983731}
   eatCake: {fileID: 1195287665}
   UIPhone: {fileID: 162129185}
+  sitScriptDesk: {fileID: 1430910328}
+  sitScriptBed: {fileID: 333245826}
 --- !u!1 &1889893459
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SitDown : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class SitDown : MonoBehaviour
     public bool startSeated = false; // Determines if this is the seat the player starts in
 
     public static SitDown currentSeat; // Stores the seat the player is currently sitting in
+
+    public bool SITTING = false;
 
     private GameObject player;
     private Camera playerCamera;
@@ -42,6 +45,10 @@ public class SitDown : MonoBehaviour
     void Update()
     {
         if (player == null || playerCamera == null) return;
+
+        SITTING = isSitting;
+
+        
 
         // Check for sitting/standing input
         if (Input.GetKeyDown(KeyCode.F))
