@@ -76,7 +76,10 @@ public class RaycastObjectDisplay : MonoBehaviour
             }
 
             Destroy(obj); // Pick up (destroy) the object
-            UIPhone.SetActive(true);
+            if (obj.CompareTag("Phone"))
+            {
+                UIPhone.SetActive(true);
+            }
         }
     }
 }
