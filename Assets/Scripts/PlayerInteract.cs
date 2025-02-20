@@ -12,7 +12,7 @@ public class RaycastObjectDisplay : MonoBehaviour
         DisplayObjectName();
     }
 
-    void DisplayObjectName()
+    private void DisplayObjectName()
     { 
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -26,16 +26,26 @@ public class RaycastObjectDisplay : MonoBehaviour
             {
                 interactText.gameObject.SetActive(true);
                 interactText.text = "press [e] to pickup the phone";
+                Interact(hit.collider.gameObject);
             }
             else if (hit.collider.gameObject.CompareTag("Toothbrush") && INRANGE)
             {
                 interactText.gameObject.SetActive(true);
                 interactText.text = "press [e] to pickup the toothbrush";
+                Interact(hit.collider.gameObject);
             }
             else
             {
                 interactText.gameObject.SetActive(false);
             }
+        }
+    }
+
+    private void Interact(GameObject obj)
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Destroy(obj);
         }
     }
 }
