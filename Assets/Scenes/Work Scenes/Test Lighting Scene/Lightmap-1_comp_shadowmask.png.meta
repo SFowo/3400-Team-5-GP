@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b59c20789059ff54f972dcf05d9afc69
+guid: 0c159d930fca947428c77f2a6f9b1ad0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -7,7 +7,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-    sRGBTexture: 1
+    sRGBTexture: 0
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -54,7 +54,7 @@ TextureImporter:
   alphaUsage: 0
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-  textureType: 6
+  textureType: 11
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
