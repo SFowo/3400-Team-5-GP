@@ -49935,26 +49935,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3657667212388104921, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.637
-      objectReference: {fileID: 0}
-    - target: {fileID: 3821967815393165419, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: near clip plane
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5647815166617534212, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: m_Height
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5647815166617534212, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: m_Radius
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6410658566529654021, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
     - target: {fileID: 6559367508717014139, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.468
