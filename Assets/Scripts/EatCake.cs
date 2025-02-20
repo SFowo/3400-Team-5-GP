@@ -1,9 +1,11 @@
 using UnityEngine;
+using System.Collections;
 
 public class EatCake : MonoBehaviour
 {
     public GameObject[] cakePieces; // Array of cake pieces
     private int cakeIndex = 0; // Track the current piece being eaten
+    public bool allCakeEaten { get; private set; } = false; // Flag to track if all cake is eaten
 
     void Start()
     {
@@ -56,5 +58,18 @@ public class EatCake : MonoBehaviour
         }
 
         cakeIndex++; // Move to the next piece
+
+        // Check if all pieces are eaten
+        if (cakeIndex >= cakePieces.Length)
+        {
+            StartCoroutine(DelayedEnablePhone()); // Delay setting allCakeEaten
+        }
+    }
+
+    IEnumerator DelayedEnablePhone()
+    {
+        yield return new WaitForSeconds(0.1f); // Small delay to prevent same-frame interaction
+        allCakeEaten = true;
+        Debug.Log("All cake pieces are eaten. You can now pick up the phone.");
     }
 }

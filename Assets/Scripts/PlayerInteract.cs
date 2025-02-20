@@ -4,8 +4,10 @@ using UnityEngine.UI;
 public class RaycastObjectDisplay : MonoBehaviour
 {
     public float rayDistance = 100f;
-    private bool CANSEEPHONE = true;
     public Text interactText;
+    public EatCake eatCake; // Reference to EatCake script
+    private bool CANSEEPHONE = true;
+    public GameObject UIPhone;
 
     void Update()
     {
@@ -24,14 +26,22 @@ public class RaycastObjectDisplay : MonoBehaviour
 
             if (hit.collider.gameObject.CompareTag("Phone") && CANSEEPHONE && INRANGE)
             {
-                interactText.gameObject.SetActive(true);
-                interactText.text = "press [e] to pickup the phone";
-                Interact(hit.collider.gameObject);
+                if (eatCake != null && eatCake.allCakeEaten) // Check if all cake is eaten
+                {
+                    interactText.gameObject.SetActive(true);
+                    interactText.text = "Press [E] to pick up the phone";
+                    Interact(hit.collider.gameObject);
+                }
+                else
+                {
+                    interactText.gameObject.SetActive(true);
+                    interactText.text = "Eat all the cake first!";
+                }
             }
             else if (hit.collider.gameObject.CompareTag("Toothbrush") && INRANGE)
             {
                 interactText.gameObject.SetActive(true);
-                interactText.text = "press [e] to pickup the toothbrush";
+                interactText.text = "Press [E] to pick up the toothbrush";
                 Interact(hit.collider.gameObject);
             }
             else
@@ -45,7 +55,14 @@ public class RaycastObjectDisplay : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(obj);
+            if (obj.CompareTag("Phone") && eatCake != null && !eatCake.allCakeEaten)
+            {
+                Debug.Log("You must eat all the cake before picking up the phone!");
+                return;
+            }
+
+            Destroy(obj); // Pick up (destroy) the object
+            UIPhone.SetActive(true);
         }
     }
 }
