@@ -2,22 +2,21 @@ using UnityEngine;
 
 public class AudioMemoPlayer : MonoBehaviour
 {
-    public AudioSource audioSource;  // Assign your AudioSource in the Inspector
-    public Transform progressDot;    // Assign the white dot object
-    public Transform startPoint;     // Left-most position of the progress bar
-    public Transform endPoint;       // Right-most position of the progress bar
+    public AudioSource audioSource;
+    public Transform progressDot;
+    public Transform startPoint;
+    public Transform endPoint;
+    public GameObject phoneObject;
 
-    private bool isPlaying = false;  // Track play state
+    private bool isPlaying = false;
 
     void Update()
     {
-        // Check if the audio is playing
         if (audioSource.isPlaying)
         {
             UpdateProgress();
         }
 
-        // Pause / Resume on spacebar press
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TogglePlayPause();
@@ -26,10 +25,8 @@ public class AudioMemoPlayer : MonoBehaviour
 
     void UpdateProgress()
     {
-        // Calculate the progress based on playback time
         float progress = audioSource.time / audioSource.clip.length;
         
-        // Lerp between start and end positions
         progressDot.position = Vector3.Lerp(startPoint.position, endPoint.position, progress);
     }
 
@@ -39,6 +36,7 @@ public class AudioMemoPlayer : MonoBehaviour
         {
             audioSource.Pause();
             isPlaying = false;
+            ToggleMeshRenderers(false);
         }
         else
         {
@@ -51,7 +49,19 @@ public class AudioMemoPlayer : MonoBehaviour
                 audioSource.Play();
             }
             isPlaying = true;
+            ToggleMeshRenderers(true);
         }
     }
 
+    void ToggleMeshRenderers(bool state)
+    {
+        if (phoneObject != null)
+        {
+            MeshRenderer[] meshRenderers = phoneObject.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer renderer in meshRenderers)
+            {
+                renderer.enabled = state;
+            }
+        }
+    }
 }

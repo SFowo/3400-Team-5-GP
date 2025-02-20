@@ -6142,6 +6142,7 @@ MonoBehaviour:
   progressDot: {fileID: 162129184}
   startPoint: {fileID: 1643796312}
   endPoint: {fileID: 2033169940}
+  phoneObject: {fileID: 162129185}
 --- !u!82 &162129187
 AudioSource:
   m_ObjectHideFlags: 0
@@ -11307,7 +11308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8159671993453274894, guid: cb63a3a58c50cf44d880397a58cf2893, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.052000046
+      value: 0.0951
       objectReference: {fileID: 0}
     - target: {fileID: 8159671993453274894, guid: cb63a3a58c50cf44d880397a58cf2893, type: 3}
       propertyPath: m_LocalRotation.w
@@ -14966,7 +14967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 948269984316766234, guid: 7abb43d63f081fa47a20b8f0b81b3a45, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.04100001
+      value: 0.088
       objectReference: {fileID: 0}
     - target: {fileID: 948269984316766234, guid: 7abb43d63f081fa47a20b8f0b81b3a45, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24058,7 +24059,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1385666993044236681, guid: 932ff31e032205a4ebdbfc9c5d259e96, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.95899993
+      value: -1.4118
       objectReference: {fileID: 0}
     - target: {fileID: 1385666993044236681, guid: 932ff31e032205a4ebdbfc9c5d259e96, type: 3}
       propertyPath: m_LocalPosition.y
@@ -87634,7 +87635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8159671993453274894, guid: cb63a3a58c50cf44d880397a58cf2893, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.163
+      value: -1.411
       objectReference: {fileID: 0}
     - target: {fileID: 8159671993453274894, guid: cb63a3a58c50cf44d880397a58cf2893, type: 3}
       propertyPath: m_LocalPosition.y
