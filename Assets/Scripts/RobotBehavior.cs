@@ -51,11 +51,11 @@ public class RobotBehavior : MonoBehaviour
 
         if (distFromStart >= lowerBound && distFromStart <= upperBound)
         {
-            Debug.Log("Can see player");
+
         }
         else
         {
-            Debug.Log("Can't see player");
+
         }
     }
 }
