@@ -69,7 +69,6 @@ namespace Common.Player
             playerInput = GetComponent<PlayerInput>();
             moveAction = playerInput.actions["move"];
             lookAction = playerInput.actions["look"];
-            Debug.Log("At least this works");
         }
 
         void Start()
@@ -128,7 +127,6 @@ namespace Common.Player
             input = Vector3.ClampMagnitude(input, 1f);
             input *= speed * MovementSpeedMultiplier;
             
-            Debug.Log(input);
             return input;
         }
 
