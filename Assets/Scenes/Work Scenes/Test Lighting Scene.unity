@@ -10208,8 +10208,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 912002153}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_Intensity
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 4.1235e-41
+      value: 4.1743e-41
+      objectReference: {fileID: 0}
+    - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.285697e-39
       objectReference: {fileID: 0}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_BoundingSphereOverride.y
@@ -10217,7 +10225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 2.5e-44
+      value: 9.5e-44
       objectReference: {fileID: 0}
     - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Mesh
@@ -10225,7 +10233,7 @@ PrefabInstance:
       objectReference: {fileID: 912002153}
     - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_VersionIndex
-      value: 264
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 6119599253354900462, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Name
@@ -11500,53 +11508,17 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 423707845}
-    - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_Lightmapping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 4.1895e-41
-      objectReference: {fileID: 0}
-    - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 1.02e-43
-      objectReference: {fileID: 0}
-    - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 6e-44
-      objectReference: {fileID: 0}
-    - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 3e-44
-      objectReference: {fileID: 0}
     - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 423707845}
     - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_VersionIndex
-      value: 264
-      objectReference: {fileID: 0}
-    - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_SelectedEdges.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_SelectedFaces.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_SelectedVertices.Array.size
-      value: 4
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 6119599253354900462, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Name
       value: Light (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6119599253354900462, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6703930780735537594, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Mesh
@@ -12609,7 +12581,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2702545000757341634, guid: 16db4849f17f79947aecc17e0d53eb20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: 1.6875
       objectReference: {fileID: 0}
     - target: {fileID: 2702545000757341634, guid: 16db4849f17f79947aecc17e0d53eb20, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14945,7 +14917,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 2e-44, z: 4.2127e-41, w: 1.7751867e+28}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 1}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -35271,23 +35243,23 @@ PrefabInstance:
       objectReference: {fileID: 1805252415}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Lightmapping
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 0
+      value: 3.1917e-41
       objectReference: {fileID: 0}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0
+      value: 1.561202e-39
       objectReference: {fileID: 0}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: 6e-44
       objectReference: {fileID: 0}
     - target: {fileID: 856420286963003703, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 0
+      value: 3.1e-44
       objectReference: {fileID: 0}
     - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Mesh
@@ -35295,7 +35267,7 @@ PrefabInstance:
       objectReference: {fileID: 1805252415}
     - target: {fileID: 1603618981683397194, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_VersionIndex
-      value: 264
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 6119599253354900462, guid: 94ce1f216d333a34fb900a1c5aec6c94, type: 3}
       propertyPath: m_Name
