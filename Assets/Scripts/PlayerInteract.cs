@@ -35,7 +35,7 @@ public class RaycastObjectDisplay : MonoBehaviour
                 else
                 {
                     interactText.gameObject.SetActive(true);
-                    interactText.text = "Eat all the cake first!";
+                    interactText.text = "Press [E] to eat cake";
                 }
             }
             else if (hit.collider.gameObject.CompareTag("Toothbrush") && INRANGE)
