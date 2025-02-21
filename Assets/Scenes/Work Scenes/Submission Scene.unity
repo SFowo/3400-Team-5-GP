@@ -87778,11 +87778,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.6, y: 0.6, z: 0.6}
+  m_Size: {x: 0.10980535, y: 0.08381125, z: 0.23126069}
   m_Center: {x: 0.00060150126, y: 0.00042251844, z: -0.004478438}
 --- !u!1001 &1726498876
 PrefabInstance:
