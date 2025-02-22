@@ -13,7 +13,6 @@ namespace Common.Player
         [Header("Movement")]
         [SerializeField] private float mouseSensitivity = 3f;
         [SerializeField] private float walkingSpeed = 5f;
-        [SerializeField] private float climbingSpeed = 2f;
         [SerializeField] private float mass = 3f;
         [SerializeField] private float acceleration = 20f;
 
@@ -34,6 +33,7 @@ namespace Common.Player
         {
             Walking,
             Climbing,
+            Flying,
         }
 
 
@@ -90,9 +90,10 @@ namespace Common.Player
                 case State.Climbing:
                     UpdateLook();
                     break;
+                case State.Flying:
+                    UpdateLook();
+                    break;
             }
-
-
         }
 
         private void UpdateGround()
