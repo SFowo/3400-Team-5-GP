@@ -104650,21 +104650,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2581587405873697716, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: flyingSpeed
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 2649713271142723359, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5647815166617534212, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: m_Height
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5647815166617534212, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
-      propertyPath: m_Radius
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6559367508717014139, guid: 19b267767f8b9644b82be6c9ac6279f3, type: 3}
       propertyPath: m_LocalPosition.x

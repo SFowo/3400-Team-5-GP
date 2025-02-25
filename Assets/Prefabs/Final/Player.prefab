@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66f6be420ec598d4795386d0563c0b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyingSpeed: 20
+  flyingSpeed: 3
 --- !u!114 &5491096417500574768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.1
   far clip plane: 1000
   field of view: 60
   orthographic: 0
