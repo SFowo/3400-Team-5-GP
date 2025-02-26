@@ -9,13 +9,6 @@ namespace Common
     {
         #region Inspector Variables
 
-        [Serializable]
-        public class TriggerZone
-        {
-            public Collider collider;
-            public TriggerType triggerType;
-        }
-
         public enum TriggerType
         {
             AirLock,
@@ -24,56 +17,21 @@ namespace Common
             ThirdFloor,
         }
 
-        public List<TriggerZone> triggerZones;
-
         [Header("Common")] 
         [SerializeField] private AudioSource audioSource;
+        [SerializeField] private GameObject player;
 
         [Header("AirLock")] 
         [SerializeField] private AudioClip airLockSound;   // Background noise (loops)
         [SerializeField] private AudioClip initialDialogue; // One-time dialogue
         [SerializeField] private GameObject keyPadScreen;
-        [SerializeField] private Animator airLockAnimator; //door animator
+        [SerializeField] private Animator airLockAnimator; // Door animator
 
         #endregion
 
-        #region Unity Methods
+        #region Public Methods
 
-        private void Start()
-        {
-            StartCoroutine(PlayDialogueAndHandleAirlockSequence());
-        }
-
-        #endregion
-
-        #region Trigger & Delegator
-
-        private void OnTriggerEnter(Collider other)
-        {
-            foreach (var zone in triggerZones)
-            {
-                if (zone.collider == other)
-                {
-                    Debug.Log($"{other.gameObject.name} entered {zone.collider.name}");
-                    PerformAction(other.gameObject, zone.triggerType);
-                    break;
-                }
-            }
-        }
-
-        private void OnTriggerExit(Collider other)
-        {
-            foreach (var zone in triggerZones)
-            {
-                if (zone.collider == other)
-                {
-                    Debug.Log($"{other.gameObject.name} exited {zone.collider.name}");
-                    break;
-                }
-            }
-        }
-
-        private void PerformAction(GameObject obj, TriggerType type)
+        public void TriggerZoneEntered(GameObject obj, TriggerType type)
         {
             Debug.Log($"Performing {type} action for {obj.name}");
 
@@ -84,19 +42,37 @@ namespace Common
                     break;
 
                 case TriggerType.FirstFloor:
+                    AdjustPlayerSize(0.3f, 0.5f);
                     break;
 
                 case TriggerType.SecondFloor:
+                    // Add logic if needed
                     break;
 
                 case TriggerType.ThirdFloor:
+                    // Add logic if needed
                     break;
             }
         }
 
+        public void TriggerZoneExited(GameObject obj, TriggerType type)
+        {
+            Debug.Log($"{obj.name} exited {type} area.");
+        }
+
         #endregion
 
-        #region Airlock Handling
+        #region Private Methods
+
+        private void AdjustPlayerSize(float radius, float height)
+        {
+            CharacterController controller = player.GetComponent<CharacterController>();
+            if (controller != null)
+            {
+                controller.radius = radius;
+                controller.height = height;
+            }
+        }
 
         private IEnumerator PlayDialogueAndHandleAirlockSequence()
         {
@@ -122,7 +98,6 @@ namespace Common
             audioSource.Stop();
             audioSource.clip = null;
         }
-        
 
         private void OpenAirLock()
         {
