@@ -13,7 +13,8 @@ namespace Common
         {
             AirLock,
             FirstFloor,
-            SecondFloor,
+            InitialVent,
+            CargoVent,
             ThirdFloor,
         }
 
@@ -22,7 +23,7 @@ namespace Common
         [SerializeField] private GameObject player;
 
         [Header("AirLock")] 
-        [SerializeField] private AudioClip airLockSound;  // Background noise (loops)
+        [SerializeField] private AudioClip airLockSound;  // Now plays only once when the door opens
         [SerializeField] private AudioClip airLockDialogueOne;
         [SerializeField] private AudioClip airLockDialogueTwo;
         [SerializeField] private GameObject keyPadScreen;
@@ -30,6 +31,15 @@ namespace Common
         [SerializeField] private AudioClip doorOpening;
         [SerializeField] private AudioClip keypadUnlock;
         [SerializeField] private AudioClip airlockGas;
+        
+        [Header("Vent")]
+        [SerializeField] private AudioClip heartBeat;
+        [SerializeField] private AudioClip backgroundMusic;
+        [SerializeField] private AudioClip monsterSound;
+        [SerializeField] private GameObject deadGuy;  // Reference to the dead guy in vent
+
+        private AudioSource heartBeatSource;
+        private AudioSource bgMusicSource;
 
         #endregion
 
@@ -39,6 +49,16 @@ namespace Common
         {
             // Start playing airlock sequence as soon as the scene loads
             StartCoroutine(PlayAirlockSequence());
+
+            // Setup separate audio sources for background music and heartbeat
+            heartBeatSource = gameObject.AddComponent<AudioSource>();
+            heartBeatSource.clip = heartBeat;
+            heartBeatSource.loop = true;
+            heartBeatSource.volume = 0.2f; // Start at low volume
+
+            bgMusicSource = gameObject.AddComponent<AudioSource>();
+            bgMusicSource.clip = backgroundMusic;
+            bgMusicSource.loop = true;
         }
 
         #endregion
@@ -52,17 +72,34 @@ namespace Common
             switch (type)
             {
                 case TriggerType.AirLock:
-                    // Airlock sequence now starts automatically at scene load, so no need to trigger it here.
+                    // Airlock sequence starts automatically at scene load
                     break;
 
                 case TriggerType.FirstFloor:
                     AdjustPlayerSize(0.3f, 0.5f);
                     player.GetComponent<Rigidbody>().AddForce(Vector3.forward * 5);
                     player.GetComponent<Player.Player>().CurrentState = Player.Player.State.Flying;
+
+                    // Start background music for the entire game
+                    if (!bgMusicSource.isPlaying)
+                    {
+                        bgMusicSource.Play();
+                        Debug.Log("Background music started...");
+                    }
                     break;
 
-                case TriggerType.SecondFloor:
-                    // Add logic if needed
+                case TriggerType.InitialVent:
+                    StartCoroutine(PlayHeartbeatIncreasingVolume());
+                    if (!bgMusicSource.isPlaying)
+                    {
+                        bgMusicSource.Play();
+                    }
+                    break;
+
+                case TriggerType.CargoVent:
+                    // Play monster sound once
+                    audioSource.PlayOneShot(monsterSound);
+                    Debug.Log("Monster sound played in cargo vent!");
                     break;
 
                 case TriggerType.ThirdFloor:
@@ -92,13 +129,7 @@ namespace Common
 
         private IEnumerator PlayAirlockSequence()
         {
-            // Step 1: Start looping airlock sound
-            audioSource.clip = airLockSound;
-            audioSource.loop = true;
-            audioSource.Play();
-            Debug.Log("Looping airlock background sound...");
-
-            // Step 2: Play first dialogue
+            // Step 1: Play first dialogue
             audioSource.volume = 0.75f;
             audioSource.PlayOneShot(airLockDialogueOne);
             Debug.Log("Playing first dialogue...");
@@ -106,23 +137,20 @@ namespace Common
             // Wait for first dialogue to finish
             yield return new WaitForSeconds(airLockDialogueOne.length - 2);
 
-            // Step 3: Play second dialogue immediately
+            // Step 2: Play second dialogue
             audioSource.PlayOneShot(airLockDialogueTwo);
             Debug.Log("Playing second dialogue...");
             
             audioSource.volume = 1f;
-            // Wait for second dialogue to finish
             yield return new WaitForSeconds(airLockDialogueTwo.length);
-            audioSource.volume = 1f; // Ensure volume is set high enough
 
-
-            // Step 4: Wait 0.5 sec, then turn keypad green
+            // Step 3: Wait 0.3 sec, then turn keypad green
             yield return new WaitForSeconds(0.3f);
             keyPadScreen.GetComponent<Renderer>().material.color = Color.green;
             audioSource.PlayOneShot(keypadUnlock);
             Debug.Log("Keypad turned green!");
 
-            // Step 5: Wait 0.3 sec, then open the airlock
+            // Step 4: Wait 0.3 sec, then open the airlock
             yield return new WaitForSeconds(0.3f);
             OpenAirLock();
             audioSource.PlayOneShot(doorOpening);
@@ -131,15 +159,29 @@ namespace Common
 
             Debug.Log("Airlock door opened!");
 
-            // Stop the looping background sound
-            audioSource.Stop();
-            audioSource.clip = null;
+            // Step 5: **Play airlock sound once (not looping)**
+            audioSource.PlayOneShot(airLockSound);
+            Debug.Log("Airlock sound played once.");
         }
 
         private void OpenAirLock()
         {
             airLockAnimator.SetBool("Open", true);
             airLockAnimator.SetBool("Close", false);
+        }
+
+        private IEnumerator PlayHeartbeatIncreasingVolume()
+        {
+            heartBeatSource.Play();
+            Debug.Log("Heartbeat started...");
+
+            while (heartBeatSource.volume < 1f)
+            {
+                float distance = Vector3.Distance(player.transform.position, deadGuy.transform.position);
+                float volume = Mathf.Clamp(1f - (distance / 10f), 0.5f, 1f); // Volume increases as player gets closer
+                heartBeatSource.volume = volume;
+                yield return new WaitForSeconds(0.2f); // Gradual increase
+            }
         }
 
         #endregion
