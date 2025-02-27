@@ -22,10 +22,21 @@ namespace Common
         [SerializeField] private GameObject player;
 
         [Header("AirLock")] 
-        [SerializeField] private AudioClip airLockSound;   // Background noise (loops)
-        [SerializeField] private AudioClip initialDialogue; // One-time dialogue
+        [SerializeField] private AudioClip airLockSound;  // Background noise (loops)
+        [SerializeField] private AudioClip airLockDialogueOne;
+        [SerializeField] private AudioClip airLockDialogueTwo;
         [SerializeField] private GameObject keyPadScreen;
         [SerializeField] private Animator airLockAnimator; // Door animator
+
+        #endregion
+
+        #region Unity Methods
+
+        private void Start()
+        {
+            // Start playing airlock sequence as soon as the scene loads
+            StartCoroutine(PlayAirlockSequence());
+        }
 
         #endregion
 
@@ -38,11 +49,12 @@ namespace Common
             switch (type)
             {
                 case TriggerType.AirLock:
-                    StartCoroutine(PlayDialogueAndHandleAirlockSequence());
+                    // Airlock sequence now starts automatically at scene load, so no need to trigger it here.
                     break;
 
                 case TriggerType.FirstFloor:
                     AdjustPlayerSize(0.3f, 0.5f);
+                    player.GetComponent<Rigidbody>().AddForce(Vector3.forward * 5);
                     break;
 
                 case TriggerType.SecondFloor:
@@ -74,27 +86,41 @@ namespace Common
             }
         }
 
-        private IEnumerator PlayDialogueAndHandleAirlockSequence()
+        private IEnumerator PlayAirlockSequence()
         {
-            // Step 1: Play both dialogue & background noise immediately
-            audioSource.PlayOneShot(initialDialogue);
+            // Step 1: Start looping airlock sound
             audioSource.clip = airLockSound;
             audioSource.loop = true;
             audioSource.Play();
-            Debug.Log("Playing initial dialogue & looping airlock sound...");
+            Debug.Log("Looping airlock background sound...");
 
-            // Step 2: Wait for dialogue to finish
-            yield return new WaitForSeconds(initialDialogue.length);
+            // Step 2: Play first dialogue
+            audioSource.volume = 0.75f;
+            audioSource.PlayOneShot(airLockDialogueOne);
+            Debug.Log("Playing first dialogue...");
 
-            // Step 3: After 0.5 sec, switch keypad to green
+            // Wait for first dialogue to finish
+            yield return new WaitForSeconds(airLockDialogueOne.length);
+
+            // Step 3: Play second dialogue immediately
+            audioSource.PlayOneShot(airLockDialogueTwo);
+            Debug.Log("Playing second dialogue...");
+            
+            audioSource.volume = 1f;
+            // Wait for second dialogue to finish
+            yield return new WaitForSeconds(airLockDialogueTwo.length);
+
+            // Step 4: Wait 0.5 sec, then turn keypad green
             yield return new WaitForSeconds(0.5f);
             keyPadScreen.GetComponent<Renderer>().material.color = Color.green;
             Debug.Log("Keypad turned green!");
 
-            // Step 4: After another 0.5 sec, open the airlock door
-            yield return new WaitForSeconds(0.5f);
+            // Step 5: Wait 0.3 sec, then open the airlock
+            yield return new WaitForSeconds(0.3f);
             OpenAirLock();
             Debug.Log("Airlock door opened!");
+
+            // Stop the looping background sound
             audioSource.Stop();
             audioSource.clip = null;
         }
