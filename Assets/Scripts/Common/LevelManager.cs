@@ -27,6 +27,9 @@ namespace Common
         [SerializeField] private AudioClip airLockDialogueTwo;
         [SerializeField] private GameObject keyPadScreen;
         [SerializeField] private Animator airLockAnimator; // Door animator
+        [SerializeField] private AudioClip doorOpening;
+        [SerializeField] private AudioClip keypadUnlock;
+        [SerializeField] private AudioClip airlockGas;
 
         #endregion
 
@@ -55,6 +58,7 @@ namespace Common
                 case TriggerType.FirstFloor:
                     AdjustPlayerSize(0.3f, 0.5f);
                     player.GetComponent<Rigidbody>().AddForce(Vector3.forward * 5);
+                    player.GetComponent<Player.Player>().CurrentState = Player.Player.State.Flying;
                     break;
 
                 case TriggerType.SecondFloor:
@@ -100,7 +104,7 @@ namespace Common
             Debug.Log("Playing first dialogue...");
 
             // Wait for first dialogue to finish
-            yield return new WaitForSeconds(airLockDialogueOne.length);
+            yield return new WaitForSeconds(airLockDialogueOne.length - 2);
 
             // Step 3: Play second dialogue immediately
             audioSource.PlayOneShot(airLockDialogueTwo);
@@ -109,15 +113,22 @@ namespace Common
             audioSource.volume = 1f;
             // Wait for second dialogue to finish
             yield return new WaitForSeconds(airLockDialogueTwo.length);
+            audioSource.volume = 1f; // Ensure volume is set high enough
+
 
             // Step 4: Wait 0.5 sec, then turn keypad green
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.3f);
             keyPadScreen.GetComponent<Renderer>().material.color = Color.green;
+            audioSource.PlayOneShot(keypadUnlock);
             Debug.Log("Keypad turned green!");
 
             // Step 5: Wait 0.3 sec, then open the airlock
             yield return new WaitForSeconds(0.3f);
             OpenAirLock();
+            audioSource.PlayOneShot(doorOpening);
+            yield return new WaitForSeconds(doorOpening.length * 0.5f); 
+            audioSource.PlayOneShot(airlockGas);
+
             Debug.Log("Airlock door opened!");
 
             // Stop the looping background sound
