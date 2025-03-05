@@ -32,7 +32,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DstBlend: 10
-    - _Glossiness: 0.8
+    - _Glossiness: 0.6
     - _Metallic: 1
     - _Mode: 3
     - _ZWrite: 0
