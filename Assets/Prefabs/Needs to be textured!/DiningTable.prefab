@@ -1843,7 +1843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9124502500153571372}
   m_Layer: 0
-  m_Name: DinningTable
+  m_Name: DiningTable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
