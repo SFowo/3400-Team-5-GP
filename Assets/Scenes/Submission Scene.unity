@@ -25100,6 +25100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coffee Table
       objectReference: {fileID: 0}
+    - target: {fileID: 5664232761895802561, guid: 806719831b0fe51409a1178ca5217d14, type: 3}
+      propertyPath: effectType
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -120430,7 +120434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookThreshold: 3
-  effectType: 5
+  effectType: 1
   newColor: {r: 1, g: 0, b: 0, a: 1}
   fadeDuration: 1.5
 --- !u!43 &1647692633
