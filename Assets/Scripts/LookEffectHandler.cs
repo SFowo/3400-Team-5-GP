@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class LookEffectHandler : MonoBehaviour
 {
-    private enum EffectType { FadeOut, DisableMesh, ChangeColor, RotateAndFadeOut, FloatUpAndFade, EmissionGlow }
+    private enum EffectType { FadeOut, DisableMesh, ChangeColor, RotateAndFadeOut, FloatUpAndFade, EmissionGlow, ChangeScale, DeleteMaterial, FloatUpAndDestroy }
 
     public int LookThreshold => lookThreshold;
 
@@ -12,6 +12,7 @@ public class LookEffectHandler : MonoBehaviour
     [SerializeField] private EffectType effectType;
     [SerializeField] private Color newColor = Color.red;
     [SerializeField] private float fadeDuration = 1.5f;
+    [SerializeField] private Vector3 targetScale = new Vector3(0.1f, 0.1f, 0.1f);
 
     private bool effectTriggered;
     private int currentLookCount;
@@ -91,6 +92,15 @@ public class LookEffectHandler : MonoBehaviour
                 break;
             case EffectType.EmissionGlow:
                 StartCoroutine(EmissionGlowEffect(transform));
+                break;
+            case EffectType.ChangeScale:
+                StartCoroutine(ChangeScale(transform));
+                break;
+            case EffectType.DeleteMaterial:
+                DeleteMaterials(transform);
+                break;
+            case EffectType.FloatUpAndDestroy:
+                StartCoroutine(FloatUpAndDestroy(transform));
                 break;
         }
     }
@@ -231,5 +241,63 @@ public class LookEffectHandler : MonoBehaviour
         }
 
         ApplyEffectToRenderersRecursively(parent);
+    }
+
+    private IEnumerator ChangeScale(Transform parent)
+    {
+        float elapsedTime = 0f;
+        Vector3 originalScale = parent.localScale;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / fadeDuration;
+            parent.localScale = Vector3.Lerp(originalScale, targetScale, t);
+            yield return null;
+        }
+
+        parent.localScale = targetScale;
+    }
+
+    private void DeleteMaterials(Transform parent)
+    {
+        MeshRenderer[] renderers = parent.GetComponentsInChildren<MeshRenderer>(true);
+        foreach (MeshRenderer renderer in renderers)
+        {
+            Material[] mats = renderer.materials;
+            for (int i = 0; i < mats.Length; i++)
+            {
+                Destroy(mats[i]);
+            }
+
+            // Set to a default material to avoid errors
+            Material defaultMat = new Material(Shader.Find("Standard"));
+            defaultMat.color = Color.white;
+            renderer.material = defaultMat;
+        }
+    }
+
+    private IEnumerator FloatUpAndDestroy(Transform parent)
+    {
+        float elapsedTime = 0f;
+        Vector3 startPos = parent.position;
+        Vector3 endPos = startPos + Vector3.up * 3f;
+
+        while (elapsedTime < fadeDuration)
+        {
+            elapsedTime += Time.deltaTime;
+            parent.position = Vector3.Lerp(startPos, endPos, elapsedTime / fadeDuration);
+            yield return null;
+        }
+
+        // Disable all mesh renderers
+        MeshRenderer[] renderers = parent.GetComponentsInChildren<MeshRenderer>(true);
+        foreach (MeshRenderer renderer in renderers)
+        {
+            renderer.enabled = false;
+        }
+
+        // Optionally destroy the game object after a delay
+        Destroy(gameObject, 0.5f);
     }
 }
