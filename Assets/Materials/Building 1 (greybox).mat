@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<<< HEAD:Assets/Materials/Building 1 (greybox).mat
 --- !u!114 &-4843749333177549823
+========
+--- !u!114 &-1185612309902343194
+>>>>>>>> 65c357597d46e29ace3b09b858ea12150cb52b11:Assets/Materials/PathFromHouse (greybox).mat
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20,7 +24,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<<< HEAD:Assets/Materials/Building 1 (greybox).mat
   m_Name: Building 1 (greybox)
+========
+  m_Name: PathFromHouse (greybox)
+>>>>>>>> 65c357597d46e29ace3b09b858ea12150cb52b11:Assets/Materials/PathFromHouse (greybox).mat
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -131,7 +139,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+<<<<<<<< HEAD:Assets/Materials/Building 1 (greybox).mat
     - _BaseColor: {r: 0.745283, g: 0.6788677, b: 0.1652278, a: 1}
+========
+    - _BaseColor: {r: 0.30188674, g: 0.2691349, b: 0.2763913, a: 1}
+>>>>>>>> 65c357597d46e29ace3b09b858ea12150cb52b11:Assets/Materials/PathFromHouse (greybox).mat
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
