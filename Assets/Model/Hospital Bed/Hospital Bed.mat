@@ -1,10 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<<< HEAD:Assets/Model/Hospital Bed/Bed.mat
---- !u!114 &-6810080461390557057
-========
---- !u!114 &-8767340524889276416
->>>>>>>> 65c357597d46e29ace3b09b858ea12150cb52b11:Assets/Model/Sprinkler/Sprinkler.mat
+--- !u!114 &-8411448175863487257
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24,19 +20,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<<< HEAD:Assets/Model/Hospital Bed/Bed.mat
-  m_Name: Bed
-========
-  m_Name: Sprinkler
->>>>>>>> 65c357597d46e29ace3b09b858ea12150cb52b11:Assets/Model/Sprinkler/Sprinkler.mat
+  m_Name: Hospital Bed
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
-  m_InvalidKeywords:
-  - _METALLICGLOSSMAP
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -50,19 +41,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-<<<<<<<< HEAD:Assets/Model/Hospital Bed/Bed.mat
         m_Texture: {fileID: 2800000, guid: 0f4d7d78a0866cb4d8a95929b3821b88, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 2800000, guid: 3235797625caf5f4283847d2facca7e9, type: 3}
-========
-        m_Texture: {fileID: 2800000, guid: b3b71c3a8b1376b4b8883d6597664947, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 29f7053cfd590c64cb0526ed187e0a7d, type: 3}
->>>>>>>> 65c357597d46e29ace3b09b858ea12150cb52b11:Assets/Model/Sprinkler/Sprinkler.mat
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -82,19 +65,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-<<<<<<<< HEAD:Assets/Model/Hospital Bed/Bed.mat
         m_Texture: {fileID: 2800000, guid: 0f4d7d78a0866cb4d8a95929b3821b88, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 355150bc644e54941ac536362afe42c7, type: 3}
-========
-        m_Texture: {fileID: 2800000, guid: b3b71c3a8b1376b4b8883d6597664947, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: ed16e0002fd266d418893b24d3776350, type: 3}
->>>>>>>> 65c357597d46e29ace3b09b858ea12150cb52b11:Assets/Model/Sprinkler/Sprinkler.mat
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -138,22 +113,20 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _GlossMapScale: 1
-    - _Glossiness: 0.5
-    - _GlossyReflections: 1
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
     - _Metallic: 0
-    - _Mode: 0
     - _OcclusionStrength: 1
-    - _Parallax: 0.02
+    - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 1
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

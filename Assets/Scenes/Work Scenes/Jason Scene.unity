@@ -481,6 +481,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7047458434067395868, guid: 4144af7ec2924f94aa68c704bd43d219, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 761d839dc90eaf440a2661259d07de37, type: 2}
     - target: {fileID: 8180426743274081907, guid: 4144af7ec2924f94aa68c704bd43d219, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.661896
@@ -595,10 +599,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 540302759919957401, guid: 907946a3d8b2702408dc9c1745b4d8e9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dd7b8675a04647d4583872527b1adbe2, type: 2}
     - target: {fileID: 6123840763114622439, guid: 907946a3d8b2702408dc9c1745b4d8e9, type: 3}
       propertyPath: m_Name
       value: Bed
       objectReference: {fileID: 0}
+    - target: {fileID: 6162823957300257589, guid: 907946a3d8b2702408dc9c1745b4d8e9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dd7b8675a04647d4583872527b1adbe2, type: 2}
     - target: {fileID: 6897139778910771037, guid: 907946a3d8b2702408dc9c1745b4d8e9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.387024
@@ -639,6 +651,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7775157837389832111, guid: 907946a3d8b2702408dc9c1745b4d8e9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dd7b8675a04647d4583872527b1adbe2, type: 2}
+    - target: {fileID: 8818297824975862976, guid: 907946a3d8b2702408dc9c1745b4d8e9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: dd7b8675a04647d4583872527b1adbe2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
