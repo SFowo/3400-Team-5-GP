@@ -4,5 +4,30 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Greybox To Car.unity
+    guid: 3c675d83dbf97f549bb94d2a65adb1c0
+  - enabled: 1
+    path: Assets/Scenes/Greybox Foyer.unity
+    guid: f3ed779ad7b3439459256544fad697be
+  - enabled: 1
+    path: Assets/Scenes/Greybox Hospital Room.unity
+    guid: 826f90baa30682344ab530852f5ee24d
+  - enabled: 1
+    path: Assets/Scenes/Greybox Red light [Deprecated].unity
+    guid: e28c38d118ff17540bafc009af285ccd
+  - enabled: 1
+    path: Assets/Scenes/Greybox Street.unity
+    guid: 7ba627dc9825f1547af3be8ce83d4dc0
+  - enabled: 1
+    path: Assets/Scenes/StreetTest.unity
+    guid: 8ea8a37d9067e3c4eaf1fecfcac03fee
+  - enabled: 1
+    path: Assets/Scenes/Submission Street.unity
+    guid: 198fb4a5a029381488eaa7b27d0448b0
+  - enabled: 1
+    path: Assets/Scenes/SubmissionFoyer.unity
+    guid: 912680ed8b95f47898202446e11d8bff
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0
