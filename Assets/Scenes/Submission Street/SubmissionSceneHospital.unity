@@ -4129,7 +4129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   horizontalRotationRange: 90
-  sensitivity: 0.5
+  minVerticalRotation: 0
+  maxVerticalRotation: 0
+  horizontalSensitivity: 2
+  verticalSensitivity: 2
 --- !u!43 &987579391
 Mesh:
   m_ObjectHideFlags: 0
