@@ -4355,8 +4355,62 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1239628981513944, guid: de53374949c380a43831cdf100ac633d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 355434530}
+    - targetCorrespondingSourceObject: {fileID: 1239628981513944, guid: de53374949c380a43831cdf100ac633d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 355434529}
   m_SourcePrefab: {fileID: 100100000, guid: de53374949c380a43831cdf100ac633d, type: 3}
+--- !u!1 &355434528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1239628981513944, guid: de53374949c380a43831cdf100ac633d, type: 3}
+  m_PrefabInstance: {fileID: 355434527}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &355434529
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355434528}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.54114, y: 1, z: 2.6876135}
+  m_Center: {x: -1.0839995, y: 0, z: 0.45778382}
+--- !u!64 &355434530
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355434528}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!4 &356265791 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3868903431287433774, guid: 2458e2960af5d3444be660684c9bb8e3, type: 3}
