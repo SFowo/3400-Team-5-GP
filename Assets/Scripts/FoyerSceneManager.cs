@@ -32,7 +32,7 @@ public class FoyerSceneManager : MonoBehaviour
     {
         if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
-            if (grabJacket.grabbed && grabKey.grabbed && !doorOpened)
+            if (grabKey.grabbed && !doorOpened)
             {
                 doorOpened = true;
                 DoorOpening();
@@ -59,7 +59,7 @@ public class FoyerSceneManager : MonoBehaviour
     private IEnumerator OpenDoorCoroutine()
     {
         Quaternion startRotation = door.transform.rotation;
-        Quaternion endRotation = startRotation * Quaternion.Euler(0, -90f, 0);
+        Quaternion endRotation = startRotation * Quaternion.Euler(0, 90f, 0);
         float t = 0f;
 
         while (t < 1f)
