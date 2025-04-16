@@ -170159,6 +170159,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2355659384411412642, guid: fb4fa22ca2da19049be4b5e7678fd8a9, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 86d06f8615f880844abe892774e3d8d1, type: 2}
     - target: {fileID: 5621708828940586737, guid: fb4fa22ca2da19049be4b5e7678fd8a9, type: 3}
       propertyPath: m_Name
       value: Drunk Driver Red
