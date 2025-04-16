@@ -24,7 +24,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StreetTest.unity
     guid: 8ea8a37d9067e3c4eaf1fecfcac03fee
   - enabled: 1
-    path: Assets/Scenes/Submission Street.unity
+    path: Assets/Scenes/Submission Street/MasterStreet.unity
     guid: 198fb4a5a029381488eaa7b27d0448b0
   - enabled: 1
     path: Assets/Scenes/SubmissionFoyer.unity
