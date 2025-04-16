@@ -37904,6 +37904,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1939782325}
     m_Modifications:
+    - target: {fileID: 782590196671540351, guid: 3ea550722da64504bba2c0ffeb4f8fd3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1014738852407946233, guid: 3ea550722da64504bba2c0ffeb4f8fd3, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2385537190023529901, guid: 3ea550722da64504bba2c0ffeb4f8fd3, type: 3}
       propertyPath: m_Name
       value: Door
@@ -37962,6 +37970,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3049202771634315031, guid: 3ea550722da64504bba2c0ffeb4f8fd3, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3134401508185324459, guid: 3ea550722da64504bba2c0ffeb4f8fd3, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5224465683281408590, guid: 3ea550722da64504bba2c0ffeb4f8fd3, type: 3}
@@ -58130,7 +58142,7 @@ Transform:
   m_GameObject: {fileID: 1708605650}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.399998, y: -1.2615001, z: 1.0400008}
+  m_LocalPosition: {x: 3.399998, y: -1.307, z: 1.0400008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
