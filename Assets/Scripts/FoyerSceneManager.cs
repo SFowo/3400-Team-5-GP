@@ -9,6 +9,7 @@ public class FoyerSceneManager : MonoBehaviour
     [SerializeField] private AudioSource audio1;
     [SerializeField] private AudioSource audio2;
     [SerializeField] private float openDuration = 1f;
+    [SerializeField] private string nextSceneName = "SubmissionToCar";
 
     private bool doorOpened;
 
@@ -53,13 +54,13 @@ public class FoyerSceneManager : MonoBehaviour
             audio2.Play();
         }
 
-        StartCoroutine(OpenDoorCoroutine());
+        StartCoroutine(OpenDoorAndTransitionCoroutine());
     }
 
-    private IEnumerator OpenDoorCoroutine()
+    private IEnumerator OpenDoorAndTransitionCoroutine()
     {
         Quaternion startRotation = door.transform.rotation;
-        Quaternion endRotation = startRotation * Quaternion.Euler(0, 90f, 0);
+        Quaternion endRotation = startRotation * Quaternion.Euler(0, -90f, 0);
         float t = 0f;
 
         while (t < 1f)
@@ -68,5 +69,7 @@ public class FoyerSceneManager : MonoBehaviour
             door.transform.rotation = Quaternion.Slerp(startRotation, endRotation, t);
             yield return null;
         }
+
+        BlinkingTransitionManager.Instance.StartBlinkTransition(nextSceneName);
     }
 }
