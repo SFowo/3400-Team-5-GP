@@ -1,3 +1,4 @@
+using System.Security.AccessControl;
 using UnityEngine;
 
 public class GrabItem : MonoBehaviour
@@ -5,6 +6,8 @@ public class GrabItem : MonoBehaviour
     [SerializeField] private GameObject keyPrefab;
     [SerializeField] private AudioClip dialogue;
     [HideInInspector] public bool grabbed = false;
+
+    public AudioSource keyJingle;
 
     private bool playerInRange = false;
 
@@ -16,6 +19,12 @@ public class GrabItem : MonoBehaviour
             {
                 grabbed = true;
                 Destroy(keyPrefab);
+                if(keyJingle != null)
+                {
+                    keyJingle.Play();
+                }
+                
+
             } else if(dialogue)
             {
                 AudioSource.PlayClipAtPoint(dialogue, this.transform.position);
