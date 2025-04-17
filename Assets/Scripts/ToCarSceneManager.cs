@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class ToCarSceneManager : MonoBehaviour
 {
     [SerializeField] private string nextSceneName = "SubmissionStreetDrunk";
+    public Blinkbehavior bb;
     private bool playerInRange = false;
 
     private void Update()
@@ -17,14 +18,7 @@ public class ToCarSceneManager : MonoBehaviour
 
     private void StartCarTransition()
     {
-        if (BlinkingTransitionManager.Instance != null)
-        {
-            BlinkingTransitionManager.Instance.StartBlinkTransition(nextSceneName);
-        }
-        else
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
+        bb.FadeOut();
     }
 
     private void OnTriggerEnter(Collider other)
