@@ -8594,6 +8594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyPrefab: {fileID: 346125037}
+  dialogue: {fileID: 0}
   grabbed: 0
 --- !u!65 &346125040
 BoxCollider:
@@ -60292,6 +60293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyPrefab: {fileID: 1776496515}
+  dialogue: {fileID: 8300000, guid: 0364ae342b58698498d4d9041664b46d, type: 3}
   grabbed: 0
 --- !u!65 &1776496519
 BoxCollider:

@@ -3,16 +3,23 @@ using UnityEngine;
 public class GrabItem : MonoBehaviour
 {
     [SerializeField] private GameObject keyPrefab;
+    [SerializeField] private AudioClip dialogue;
     [HideInInspector] public bool grabbed = false;
 
     private bool playerInRange = false;
 
     private void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !grabbed)
+        if (Input.GetKeyDown(KeyCode.E) && !grabbed)
         {
-            grabbed = true;
-            Destroy(keyPrefab);
+            if (playerInRange)
+            {
+                grabbed = true;
+                Destroy(keyPrefab);
+            } else if(dialogue)
+            {
+                AudioSource.PlayClipAtPoint(dialogue, this.transform.position);
+            }
         }
     }
 
