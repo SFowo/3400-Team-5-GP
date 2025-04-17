@@ -11,6 +11,8 @@ public class FoyerSceneManager : MonoBehaviour
     [SerializeField] private float openDuration = 1f;
     [SerializeField] private string nextSceneName = "SubmissionToCar";
 
+    public Blinkbehavior bb;
+
     private bool doorOpened;
     private bool playerInRange = false;
 
@@ -87,6 +89,7 @@ public class FoyerSceneManager : MonoBehaviour
             yield return null;
         }
 
-        BlinkingTransitionManager.Instance.StartBlinkTransition(nextSceneName);
+        //BlinkingTransitionManager.Instance.StartBlinkTransition(nextSceneName);
+        bb.FadeOut();
     }
 }
