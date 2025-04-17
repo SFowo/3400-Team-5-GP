@@ -53,7 +53,10 @@ public class BlinkingTransitionManager : MonoBehaviour
             yield return new WaitForSeconds(blackScreenDuration);
 
             // Load hospital scene while eyes are closed
-            SceneManager.LoadScene(hospitalSceneName);
+            if (SceneManager.GetActiveScene().buildIndex <= 7)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
 
             // Open eyes to see hospital
             yield return Blink(false);
