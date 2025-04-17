@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3009
+  m_VersionIndex: 3012
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2500,7 +2500,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 3009
+  m_VersionIndex: 3012
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -2545,31 +2545,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.094341
+      value: 22.424034
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.0051236
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.17743874
+      value: 3.2431526
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9289551
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.37019247
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2577,7 +2577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -43.455
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -2586,7 +2586,7 @@ PrefabInstance:
     - target: {fileID: -819191278665137265, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 6168af2b4580e64409fa0b61717db780, type: 2}
+      objectReference: {fileID: 2100000, guid: c74f084532dafe84498bef8dc59f1c4f, type: 2}
     - target: {fileID: 919132149155446097, guid: 7ded91d9971c44644856947de9480796, type: 3}
       propertyPath: m_Name
       value: Stop Sign
