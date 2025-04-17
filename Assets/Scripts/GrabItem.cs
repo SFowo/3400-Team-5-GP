@@ -4,12 +4,31 @@ public class GrabItem : MonoBehaviour
 {
     [SerializeField] private GameObject keyPrefab;
     [HideInInspector] public bool grabbed = false;
-    private void OnTriggerStay(Collider other)
+
+    private bool playerInRange = false;
+
+    private void Update()
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E) && !grabbed)
         {
             grabbed = true;
             Destroy(keyPrefab);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
         }
     }
 }

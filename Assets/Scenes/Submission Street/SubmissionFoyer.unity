@@ -65852,6 +65852,14 @@ PrefabInstance:
       propertyPath: 'sceneVisibilityDurations.Array.data[0]'
       value: 0.15
       objectReference: {fileID: 0}
+    - target: {fileID: 4581541975241706257, guid: 9ab85143ac17eec4a8e0af8d6b2f940e, type: 3}
+      propertyPath: hospitalSceneVisibilityDurations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581541975241706257, guid: 9ab85143ac17eec4a8e0af8d6b2f940e, type: 3}
+      propertyPath: 'hospitalSceneVisibilityDurations.Array.data[0]'
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

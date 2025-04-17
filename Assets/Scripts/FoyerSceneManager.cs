@@ -12,6 +12,7 @@ public class FoyerSceneManager : MonoBehaviour
     [SerializeField] private string nextSceneName = "SubmissionToCar";
 
     private bool doorOpened;
+    private bool playerInRange = false;
 
     private void Start()
     {
@@ -29,15 +30,31 @@ public class FoyerSceneManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
             if (grabKey.grabbed && !doorOpened)
             {
                 doorOpened = true;
                 DoorOpening();
             }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInRange = false;
         }
     }
 
@@ -60,7 +77,7 @@ public class FoyerSceneManager : MonoBehaviour
     private IEnumerator OpenDoorAndTransitionCoroutine()
     {
         Quaternion startRotation = door.transform.rotation;
-        Quaternion endRotation = startRotation * Quaternion.Euler(0, -90f, 0);
+        Quaternion endRotation = startRotation * Quaternion.Euler(0, 90f, 0);
         float t = 0f;
 
         while (t < 1f)
