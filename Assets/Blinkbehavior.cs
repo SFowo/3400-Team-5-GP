@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Blinkbehavior : MonoBehaviour
 {
@@ -8,14 +9,22 @@ public class Blinkbehavior : MonoBehaviour
     public float fadeDuration = 0.3f;
 
     private float fadeTimer = 0f;
-
     private bool startFadeOut = false;
     private bool startFadeIn = false;
-
     private bool isBlinkingLoop = false;
+
+    private AudioSource[] audioSources;
+    private Dictionary<AudioSource, float> originalVolumes = new Dictionary<AudioSource, float>();
 
     void Start()
     {
+        audioSources = FindObjectsOfType<AudioSource>();
+        foreach (AudioSource source in audioSources)
+        {
+            originalVolumes[source] = source.volume;
+            source.volume = 0f;
+        }
+
         startFadeOut = false;
         canvasGroup.alpha = 1f;
         StartCoroutine(StartFadeInAfterDelay(0.1f));
@@ -50,6 +59,12 @@ public class Blinkbehavior : MonoBehaviour
             float progress = Mathf.Clamp01(fadeTimer / fadeDuration);
             canvasGroup.alpha = Mathf.Lerp(1f, 0f, progress);
 
+            foreach (var source in audioSources)
+            {
+                if (source != null)
+                    source.volume = Mathf.Lerp(0f, originalVolumes[source], progress);
+            }
+
             if (progress >= 1f)
             {
                 startFadeIn = false;
@@ -61,6 +76,12 @@ public class Blinkbehavior : MonoBehaviour
             fadeTimer += Time.deltaTime;
             float progress = Mathf.Clamp01(fadeTimer / fadeDuration);
             canvasGroup.alpha = Mathf.Lerp(0f, 1f, progress);
+
+            foreach (var source in audioSources)
+            {
+                if (source != null)
+                    source.volume = Mathf.Lerp(originalVolumes[source], 0f, progress);
+            }
 
             if (progress >= 1f)
             {
