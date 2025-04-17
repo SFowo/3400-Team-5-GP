@@ -246457,7 +246457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc0b7cddd20d5b41b47de6353386375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: SubmissionPostCrash
+  nextSceneName: SubmissionStreetSober
 --- !u!43 &1508035320
 Mesh:
   m_ObjectHideFlags: 0

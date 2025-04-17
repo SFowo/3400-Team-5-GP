@@ -186526,7 +186526,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 787cfba601e5d8240a7b69bacf4b0fc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: SubmissionStreetDrunk
+  nextSceneName: SubmissionPostCrash
 --- !u!43 &1062848804
 Mesh:
   m_ObjectHideFlags: 0
