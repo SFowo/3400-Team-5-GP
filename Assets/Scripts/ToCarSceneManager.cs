@@ -4,11 +4,42 @@ using UnityEngine.SceneManagement;
 
 public class ToCarSceneManager : MonoBehaviour
 {
-    private void OnTriggerStay(Collider other)
+    [SerializeField] private string nextSceneName = "SubmissionStreetDrunk";
+    private bool playerInRange = false;
+
+    private void Update()
     {
-        if (other.gameObject.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
+        if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene("Submission Street");
-        }    
+            StartCarTransition();
+        }
+    }
+
+    private void StartCarTransition()
+    {
+        if (BlinkingTransitionManager.Instance != null)
+        {
+            BlinkingTransitionManager.Instance.StartBlinkTransition(nextSceneName);
+        }
+        else
+        {
+            SceneManager.LoadScene(nextSceneName);
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerInRange = false;
+        }
     }
 }

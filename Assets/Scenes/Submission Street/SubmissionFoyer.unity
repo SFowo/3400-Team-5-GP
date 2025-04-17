@@ -65842,7 +65842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581541975241706257, guid: 9ab85143ac17eec4a8e0af8d6b2f940e, type: 3}
       propertyPath: blinkAnimationDuration
-      value: 5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4581541975241706257, guid: 9ab85143ac17eec4a8e0af8d6b2f940e, type: 3}
       propertyPath: sceneVisibilityDurations.Array.size
